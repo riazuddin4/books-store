@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "title": "The Silent Forest",
+    "author": "Amina Rahman",
+    "description": "A mysterious tale of a village surrounded by a forest where no sound exists.",
+    "category": "Story",
+    "available_quantity": 12,
+    "image_url": "https://i5.walmartimages.com/seo/The-Bright-One-Through-the-Silent-Forest-Book-one-of-the-Bright-One-Series-Paperback-9781662913990_3cddd2aa-8688-4d79-87c5-023994b3c52a.f46ceb1d1f04411b077243010e9321c2.jpeg?odnHeight=573&odnWidth=573&odnBg=FFFFFF"
+  },
+  {
+    "id": 2,
+    "title": "Code Beyond Limits",
+    "author": "James Carter",
+    "description": "An advanced guide to modern programming techniques and scalable systems.",
+    "category": "Tech",
+    "available_quantity": 8,
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDIHyIhLm5qXYagk59h_Z4l1MPED5cgEqOEQ&s"
+  },
+  {
+    "id": 3,
+    "title": "Journey to Mars",
+    "author": "Elena Rodriguez",
+    "description": "Exploring the science and challenges of human missions to Mars.",
+    "category": "Science",
+    "available_quantity": 15,
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThFi4FcW2Zu2rW2la_18rGpRCVzSso1YY4gw&s"
+  },
+  {
+    "id": 4,
+    "title": "The Lost Diary",
+    "author": "Samuel Wright",
+    "description": "A gripping story of secrets uncovered through an old diary.",
+    "category": "Story",
+    "available_quantity": 5,
+    "image_url": "https://m.media-amazon.com/images/M/MV5BOWFiZGE3MzMtYWI5MC00ZWRmLThiZWItMWU2Y2MyMjM3YTA0XkEyXkFqcGc@._V1_.jpg"
+  },
+  {
+    "id": 5,
+    "title": "AI Revolution",
+    "author": "Nadia Khan",
+    "description": "Understanding artificial intelligence and its impact on the future.",
+    "category": "Tech",
+    "available_quantity": 10,
+    "image_url": "https://i.pinimg.com/736x/4a/d5/a0/4ad5a0873306c143e64fe2837adfcf42.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Quantum Wonders",
+    "author": "Liu Cheng",
+    "description": "A deep dive into quantum physics and its strange phenomena.",
+    "category": "Science",
+    "available_quantity": 7,
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ03ztDBVTluY_SDCD5HjLpzvSwYzRryd-20Q&s"
+  },
+  {
+    "id": 7,
+    "title": "The Midnight Train",
+    "author": "Olivia Brown",
+    "description": "A suspenseful journey on a train where passengers start disappearing.",
+    "category": "Story",
+    "available_quantity": 9,
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJRJ_pfu5vMhBZEZc_hCsbvmkRxq1pJVNy6Q&s"
+  },
+  {
+    "id": 8,
+    "title": "Cybersecurity Essentials",
+    "author": "David Kim",
+    "description": "Fundamentals of protecting systems and data from cyber threats.",
+    "category": "Tech",
+    "available_quantity": 6,
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk2Z8kpXLNTjl-eYkMI4U7M9K9bkEgbtoaOA&s"
+  },
+  {
+    "id": 9,
+    "title": "The Human Brain",
+    "author": "Sophia Patel",
+    "description": "An exploration of how the brain works and processes information.",
+    "category": "Science",
+    "available_quantity": 14,
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgQksiRDBpK0iShrDIrW84jtBFKUzipImnlg&s"
+  },
+  {
+    "id": 10,
+    "title": "Echoes of the Past",
+    "author": "Michael Johnson",
+    "description": "A historical story interwoven with personal memories and discoveries.",
+    "category": "Story",
+    "available_quantity": 11,
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqjiax3YZ_OB8thM_LgNsYL48NQJGqdrpXEA&s"
+  },
+  {
+    "id": 11,
+    "title": "The Cloud Handbook",
+    "author": "Emma Wilson",
+    "description": "A practical guide to cloud computing and infrastructure design.",
+    "category": "Tech",
+    "available_quantity": 13,
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-JjCmlv4bJUngOoKtF_q_mBXZ4-x3ucbk8w&s"
+  },
+  {
+    "id": 12,
+    "title": "Secrets of the Ocean",
+    "author": "Carlos Mendes",
+    "description": "Discover the hidden ecosystems and mysteries beneath the sea.",
+    "category": "Science",
+    "available_quantity": 4,
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbEmEeXg5RkjORc7WwipfoKrcvvdLUsUgDIw&s"
+  }
+]

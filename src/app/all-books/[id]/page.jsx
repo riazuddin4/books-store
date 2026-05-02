@@ -1,13 +1,15 @@
+import BorrowButton from "@/components/BorrowButton";
 import { Button, Card, Chip, Separator } from "@heroui/react";
 import Image from "next/image";
+import Link from "next/link";
 
 
-const PhotoDetailsPage = async ({ params }) => {
+const BooksDetailsPage = async ({ params }) => {
     const { id } = await params;
     const res = await fetch('http://localhost:3000/data.json')
-    const photos = await res.json()
+    const books = await res.json()
 
-    const photo = photos.find(p => p.id == id)
+    const book = books.find(p => p.id == id)
 
 
 
@@ -16,42 +18,51 @@ const PhotoDetailsPage = async ({ params }) => {
 
             {/* <h1>{photo?.title}</h1>
          <p>{photo.description}</p> */}
-            <Card className="border rounded-xl">
-                <div className="relative w-full aspect-square">
-                    <Image
-                        src={photo.image_url}
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        alt={photo.title}
-                        className="object-cover rounded-xl"
-                    />
+            <Card className="border  ">
+                <div className="flex gap-6">
 
-                    <Chip size="sm" className="absolute right-2 top-2">{photo.category}</Chip>
-                </div>
+                    <div className="relative w-full aspect-square">
+                        <Image
+                            src={book?.image_url}
+                            fill
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            alt={book?.title}
+                            className="object-cover rounded-xl"
+                        />
 
-                <div>
-                    <h2 className="font-medium">{photo.title}</h2>
-                </div>
-
-                <div className="flex gap-5">
-                    <div className="flex items-center gap-2">
-                        <p>{photo.author}</p>
-                        
+                        <Chip size="sm" className="absolute right-2 top-2">{book?.category}</Chip>
                     </div>
 
-                    <Separator orientation="vertical" />
+
+                    <div className="">
+                        <div>
+                            <h2 className="font-medium">title:{book?.title}</h2>
+                        </div>
+                        <div className="flex items-center gap-2">
+                            <p>author: {book?.author}</p>
+
+                        </div>
+
+                        <Separator orientation="vertical" />
 
 
-                    <div className="flex items-center gap-2">
-                        <p>{photo.description}</p>
+                        <div className="flex items-center gap-2">
+                            <p>description: {book?.description}</p>
+                        </div>
+                        <div className="flex items-center gap-2">
+                            <p>quantity: {book?.available_quantity}</p>
+                        </div>
                     </div>
                 </div>
+                {/* <Link href={`/all-books/${book.id}`}>      <Button variant="outline" className={'w-full'}>Borrow This Book
+                </Button></Link> */}
+                <BorrowButton bookId={book?.id} availableQuantity={book?.available_quantity} />
 
-                
+
 
             </Card>
         </div>
     );
 };
 
-export default PhotoDetailsPage;
+export default BooksDetailsPage;

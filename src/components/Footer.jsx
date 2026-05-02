@@ -24,20 +24,19 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <Image
-                src="/logo.png"
+                src="/logo-books.png"
                 alt="pixgen logo"
-                width={32}
-                height={32}
+                width={90}
+                height={90}
                 className="dark:brightness-200"
               />
-              <h2 className="text-xl font-semibold tracking-tight text-black dark:text-white">
-                pixgen
-              </h2>
+              {/* <h2 className="text-xl font-semibold tracking-tight text-black dark:text-white">
+                Books-Store
+              </h2> */}
             </div>
 
             <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400 max-w-xs">
-              Create production-ready AI visuals in seconds. Built for speed,
-              scale, and creativity.
+              Religious Books, Exams Preparation Guide, Novel, Language & Dictionary, Children & Teens, Self-Help, Motivational and Meditation, School & College Books, Mystery, Detective, Horror,
             </p>
           </div>
 
@@ -114,7 +113,7 @@ const Footer = () => {
             </h3>
 
             <p className="text-sm text-gray-600 dark:text-gray-400">
-              Generate your first AI image today.
+              Generate your first Book.
             </p>
 
             <Link
@@ -134,7 +133,7 @@ const Footer = () => {
 
         {/* Bottom */}
         <div className="mt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500 dark:text-gray-400">
-          <p>© {new Date().getFullYear()} pixgen. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Books-Store. All rights reserved.</p>
 
           <div className="flex items-center gap-6">
             <Link

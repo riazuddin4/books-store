@@ -17,13 +17,13 @@ const Navbar = () => {
       <nav className=" flex justify-between items-center  py-3 max-w-7xl mx-auto w-full">
         <div className="flex gap-2 items-center">
           <Link href="/">
-          <Image
-            src={"/books-logo.png"}
-            alt="logo"
-            loading="eager"
-            width={60}
-            height={60}
-            className="object-cover h-auto w-auto"
+            <Image
+              src={"/logo-books.png"}
+              alt="logo"
+              loading="eager"
+              width={70}
+              height={70}
+              className="object-cover h-auto w-auto"
             />
           </Link>
           {/* <h3 className="font-black text-lg"></h3> */}
@@ -36,7 +36,7 @@ const Navbar = () => {
           <li>
             <Link href={"/all-books"}>All Books</Link>
           </li>
-          
+
           <li>
             <Link href={"/profile"}>Profile</Link>
           </li>

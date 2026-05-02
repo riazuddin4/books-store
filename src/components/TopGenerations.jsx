@@ -3,18 +3,23 @@ import BooksCard from "./BooksCard";
 
 const TopGenerations = async () => {
     const res = await fetch('http://localhost:3000/data.json')
-    const photos = await res.json()
-    const topPhotos = photos.slice(0, 8)
+    const books = await res.json()
+    const topBooks = books.slice(0, 4)
 
 
 
 
     return (
         <div>
+             <div className="overflow-hidden bg-black mt-4 text-white py-2">
+            <marquee>📚 New Arrivals: The Great Adventure | Mystery of the Night | Learn JavaScript Fast |
+                    🎉 Special Discount on Memberships – Join Today & Save Big!</marquee>
+                
+            </div>
             <h1 className="text-2xl font-bold my-5">Top Books</h1>
 
-            <div className="grid grid-cols-4 gap-5">
-                {topPhotos.map(photo => <BooksCard key={photo.id} photo={photo} />)}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                {topBooks.map(book => <BooksCard key={book.id} book={book} />)}
             </div>
         </div>
     );

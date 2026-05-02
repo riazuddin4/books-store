@@ -1,4 +1,5 @@
 "use client";
+
 import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
 import {
@@ -12,33 +13,44 @@ import {
   TextField,
 } from "@heroui/react";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { toast } from "react-toastify";
 
 export default function SignUpPage() {
-
-    const router = useRouter()
+  const router = useRouter();
+  const [formError, setFormError] = useState("");
 
   const onSubmit = async (e) => {
     e.preventDefault();
+    setFormError(""); // reset error
 
     const name = e.target.name.value;
     const image = e.target.image.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
 
-    const {data, error} = await authClient.signUp.email({
-        name,
-        email,
-        password,
-        image,
-    })
+    const { data, error } = await authClient.signUp.email({
+      name,
+      email,
+      password,
+      image,
+    });
+
     
+    if (error) {
+      const message = error.message || "Registration failed";
 
-    console.log({data, error})
+      toast.error(message);   
+      setFormError(message);  
 
-    if(!error) {
-        router.push('/signin')
+      return;
     }
 
+    await authClient.signOut();
+    
+    toast.success("Registration successful! Please login.");
+
+    router.push("/signin"); 
   };
 
   return (
@@ -46,6 +58,14 @@ export default function SignUpPage() {
       <h1 className="text-center text-2xl font-bold">Sign Up</h1>
 
       <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
+
+        {/*  Show error inside form */}
+        {formError && (
+          <p className="text-red-500 text-sm text-center">
+            {formError}
+          </p>
+        )}
+
         <TextField isRequired name="name" type="text">
           <Label>Name</Label>
           <Input placeholder="Enter your name" />
@@ -66,7 +86,6 @@ export default function SignUpPage() {
             if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(value)) {
               return "Please enter a valid email address";
             }
-
             return null;
           }}
         >
@@ -90,7 +109,6 @@ export default function SignUpPage() {
             if (!/[0-9]/.test(value)) {
               return "Password must contain at least one number";
             }
-
             return null;
           }}
         >
@@ -112,8 +130,6 @@ export default function SignUpPage() {
           </Button>
         </div>
       </Form>
-
-
     </Card>
   );
 }

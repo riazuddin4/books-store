@@ -31,7 +31,7 @@ const AllBooksPage = async ({ searchParams }) => {
 
     return (
         <div>
-            <div className="flex justify-between">
+            <div className="flex flex-col md:flex-row md:justify-between md:items-center">
                 <h1 className="text-2xl font-bold m-4">All Books</h1>
                 <form className="m-4 ">
                     <input
@@ -44,10 +44,14 @@ const AllBooksPage = async ({ searchParams }) => {
                 </form>
             </div>
 
-            <Category />
+            <div className="grid grid-cols-2 md:grid-cols-12 gap-4">
+            <div className="col-span-2 ">
+            <Category />           
+            </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
+            <div className="grid col-span-10 grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
                 {filteredBooks.map(book => <BooksCard key={book.id} book={book} />)}
+            </div>
             </div>
 
 

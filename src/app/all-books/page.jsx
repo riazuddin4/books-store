@@ -5,7 +5,7 @@ import BooksCard from "@/components/BooksCard";
 const AllBooksPage = async ({ searchParams }) => {
     const { category, search } = await searchParams;
     console.log(category)
-    const res = await fetch('http://localhost:3000/data.json',{cache: 'no-store'})
+    const res = await fetch('https://books-store-fawn.vercel.app/data.json',{cache: 'no-store'})
     const books = await res.json()
 
     // const filteredBooks = category ? books.filter(book => book.category.toLowerCase() == category.toLowerCase()) : books

@@ -98,7 +98,7 @@ const BooksDetailsPage = ({ params }) => {
     //  Fetch book data
     useEffect(() => {
         const fetchData = async () => {
-            const res = await fetch('http://localhost:3000/data.json');
+            const res = await fetch('http://localhost:3000/data.json',{cache: 'no-store'});
             const books = await res.json();
             const found = books.find(p => p.id == id);
             setBook(found);

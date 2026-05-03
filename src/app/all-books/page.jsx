@@ -2,6 +2,11 @@ import Category from "@/components/Category";
 
 import BooksCard from "@/components/BooksCard";
 
+
+export const metadata = {
+  title: "All Books",
+};
+
 const AllBooksPage = async ({ searchParams }) => {
     const { category, search } = await searchParams;
     console.log(category)

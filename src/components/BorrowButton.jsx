@@ -55,7 +55,7 @@ const BorrowButton = ({ bookId, availableQuantity }) => {
         }
 
         //Success case
-        toast.success(`Book borrowed "${book.title}" successfully!`);
+        toast.success(`Book borrowed successfully!`);
 
         
     };
